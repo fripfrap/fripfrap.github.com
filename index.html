@@ -1,0 +1,21 @@
+---
+layout: layout
+title: Home
+---
+
+{% for post in site.posts %}
+<article class="t-episode">  
+	<div class="t-episode-video" data-vimeo-id="{{ post.vimeo }}"></div>
+    <h3 class="t-episode-header t-grid">
+    	<time  class="t-episode-time t-grid__cell t-grid t-unit-1-6"
+    	       datetime="{{ post.date | date:"%Y-%m-%d" }}">
+    		<b class="t-episode-time-item t-episode-time-date t-grid__cell t-unit-1-2">{{ post.date | date: "%d" }}</b>    		
+    		<b class="t-episode-time-item t-episode-time-month-year t-grid__cell t-unit-1-2">{{ post.date | date: "%b" }}<br>
+    		   {{ post.date | date: "%Y" }}
+    		</b>    		
+    	</time>
+    	<a class="t-h1 t-episode-title t-grid__cell t-unit-5-6" href="{{ post.url }}">{{ post.title }}</a>
+    </h3>    
+    <div class="t-episode-shownotes">{{ post.content }}</div>
+</article>
+{% endfor %}
