@@ -5,21 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }} | Fripfrap</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">        
-
+        <meta name="viewport" content="width=device-width">
+        <script src="http://use.edgefonts.net/open-sans:n3.js"></script>
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">        
+        <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>                
+    <body>
         <h1 class="t-site-title"><a class="ir" href="/">Fripfrap</a></h1>
         <div class="t-site-secondary t-grid t-grid--center">
           <h3 class="t-site-secondary-title t-grid__cell t-unit-1-2">Front-end banter <small>in 30mins or less</small></h3>
           <nav class="t-site-nav t-grid__cell t-unit-1-2">
-            <a class="t-site-nav-item t-twitter-icon" data-icon="t" href="http://twitter.com/frapfrip" title="follow us on twitter"></a>
-            <a class="t-site-nav-item t-audio-icon" data-icon="f" href="#" title="Subscribe to just the audio feed"></a>
-            <a class="t-site-nav-item t-video-icon" data-icon="v" href="#" title="Subscribe to video feed"></a>
-            <a class="t-site-nav-item t-audio-icon t-itunes-icon" data-icon="f" href="Subscribe to the audio in iTunes"></a>
-            <a class="t-site-nav-item t-audio-icon t-itunes-icon" data-icon="v" href="Subscribe to the video in iTunes"></a>
+            <a class="t-site-nav-item t-twitter-icon" data-icon="t" href="http://twitter.com/frapfrip" title="Follow us on twitter"></a>
+            <a class="t-site-nav-item t-video-icon" data-icon="v" href="http://vimeo.com/fripfrap/videos/rss" title="Subscribe to vimeo video feed"></a>
+            <a class="t-site-nav-item t-audio-icon" data-icon="f" href="/feed/audio" title="Subscribe to just the audio feed"></a>
+            <a class="t-site-nav-item t-audio-icon t-itunes-icon" data-icon="%" href="/feed/itunes" title="Subscribe to the audio in iTunes"></a>            
           </nav>
         </div>
         
@@ -27,36 +26,39 @@
         {{ content }}
 
         <aside>
-          <div class="t-featuring-item">
-            <h2 class="t-h2 t-featuring-title">Featuring</h2>
-            <a class="t-featuring-item" 
-               style="background-image:url(http://api.twitter.com/1/users/profile_image/divya?size=normal)" 
+          <div class="t-featuring-item t-avatarlist">
+            <h2 class="t-h2 t-featuring-title ir">Featuring</h2>
+            <a class="t-featuring-item t-avatar"
                href="http://twitter.com/divya">
-               Divya Manian
+               <b class="t-avatar-item t-avatar-name">Divya Manian</b>
+               <img class="t-avatar-item t-avatar-image" src="http://api.twitter.com/1/users/profile_image/divya?size=bigger">
             </a>
-            &
-            <a class="t-featuring-item"
-               style="background-image: url(http://api.twitter.com/1/users/profile_image/garannm?size=normal)" 
+            <b class="t-featuring-amp">&</b>
+            <a class="t-featuring-item t-avatar"
                href="http://twitter.com/garannm">
-               Garann Means
+               <img class="t-avatar-item t-avatar-image" src="http://api.twitter.com/1/users/profile_image/garannm?size=bigger">
+               <b class="t-avatar-item t-avatar-name">Garann Means</b>
             </a>
           </div>
           <div class="t-featuring-item">
-            <h2 class="t-h2 t-featuring-title">Music Credits</h2>
+            <h2 class="t-h2">Music Credits</h2>
             <p class="t-featuring-content">Selections by <a href="http://twitter.com/ultror">Jonas Westerlund</a></p>
-            <ul class="t-list t-featuring-list">
-              <li class="t-list-item t-featuring-list-item">
-                <a href="http://randsrecords.greedbag.com/buy/the-pathway-to-tiraquon/"><cite>FEATURE PRESENTATION</cite> by Space Dimension Controller</a>
+              <li class="t-list-item t-credit-item">
+                <a class="t-credit-item-content" href="http://randsrecords.greedbag.com/buy/the-pathway-to-tiraquon/"><cite class="t-credit-songtitle">FEATURE PRESENTATION</cite> by Space Dimension Controller</a>
               </li>
-              <li class="t-list-item t-featuring-list-item">
-                <a href="http://kaninerecords.com/the-depreciation-guild"><cite>My Chariot</cite> by The Depreciation Guild</a>
+              <li class="t-list-item t-credit-item">
+                <a class="t-credit-item-content" href="http://kaninerecords.com/the-depreciation-guild"><cite class="t-credit-songtitle">My Chariot</cite> by The Depreciation Guild</a>
               </li>
             </ul>
+          </div>
+          <div class="t-featuring-item t-copyright">
+            <p class="t-featuring-content">&copy; MMXII<br>Divya Manian & Garann Means.</p>
+            <p class="t-featuring-content">All videos released under <a href="#">CC 3.0 license</a></p>
           </div>
         </aside>
 
         <script src="js/main.js"></script>
-        
+
         <script>
             var _gaq=[['_setAccount','UA-97188-3'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
