@@ -5,14 +5,14 @@ layout: layout
 <article class="t-episode">  
 	<div class="t-episode-video" data-vimeo-id="{{ page.vimeo }}"></div>
     <h3 class="t-episode-header t-grid">
-    	<time  class="t-episode-time t-grid__cell t-grid t-unit-1-5"
+    	<time  class="t-episode-time t-gridcell-1-5 t-grid"
     	       datetime="{{ page.date | date:"%Y-%m-%d" }}">
-    		<b class="t-episode-time-item t-episode-time-date t-grid__cell t-unit-1-3">{{ page.date | date: "%d" }}</b>
-    		<b class="t-episode-time-item t-episode-time-month-year t-grid__cell t-unit-2-3">{{ page.date | date: "%b" }}<br>
+    		<b class="t-episode-time-item t-episode-time-date t-gridcell-1-3">{{ page.date | date: "%d" }}</b>
+    		<b class="t-episode-time-item t-episode-time-month-year t-gridcell-2-3">{{ page.date | date: "%b" }}<br>
     		   {{ page.date | date: "%Y" }}
     		</b>    		
     	</time>
-    	<a class="t-h1 t-episode-title t-grid__cell t-unit-4-5" href="{{ post.url }}">{{ page.title }}</a>
+    	<a class="t-h1 t-episode-title t-gridcell-4-5" href="{{ post.url }}">{{ page.title }}</a>
     </h3>    
     <div class="t-episode-shownotes"><h4>Show Notes</h4>{{ content }}</div>
 </article>

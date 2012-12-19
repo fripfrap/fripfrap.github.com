@@ -4,18 +4,16 @@ title: Home
 ---
 
 {% for page in site.posts %}
-<article class="t-episode">  
+<article class="t-episode">
 	<div class="t-episode-video">
         <iframe src="http://player.vimeo.com/video/{{ page.vimeo }}?badge=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
     </div>
     <a href="{{ page.url }}">
-        <h3>
         	<time  class="t-episode-time"
-        	       datetime="{{ page.date | date:"%Y-%m-%d" }}">                            
+        	       datetime="{{ page.date | date:"%Y-%m-%d" }}">
                 <b class="t-episode-time-item t-episode-time-date">{{ page.date | date: "%d" }}</b>
                 <b class="t-episode-time-item t-episode-time-month-year">{{ page.date | date: "%b %Y" }}</b>
-        	</time>        	
-        </h3>    
+        	</time>        
     </a>
     <div class="t-episode-shownotes">{{ page.content }}</div>
 </article>

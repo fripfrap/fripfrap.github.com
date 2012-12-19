@@ -4,17 +4,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Episode 02 | Fripfrap</title>
-        <meta name="description" content="">
+        <meta name="description" content="The Website for Fripfrap Podcast">
         <meta name="viewport" content="width=device-width">
-        <script src="http://use.edgefonts.net/open-sans:n3.js"></script>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <script src="http://use.edgefonts.net/open-sans:n3.js"></script>        
+        <link rel="stylesheet" href="css/main.min.css">
     </head>
     <body>
         <h1 class="t-site-title"><a class="ir" href="/">Fripfrap</a></h1>
-        <div class="t-site-secondary t-grid t-grid--center">
-          <h3 class="t-site-secondary-title t-grid__cell t-unit-1-2">Front-end banter <small>in 30mins or less</small></h3>
-          <nav class="t-site-nav t-grid__cell t-unit-1-2">
+        <div class="t-site-secondary t-grid--center">
+          <h3 class="t-site-secondary-title t-gridcell-1-2">Front-end banter <small>in 30mins or less</small></h3>
+          <nav class="t-site-nav t-gridcell-1-2">
             <a class="t-site-nav-item t-twitter-icon" data-icon="&#xE0001" href="http://twitter.com/frapfrip" title="Follow us on twitter"></a>
             <a class="t-site-nav-item t-video-icon" data-icon="&#xE0004" href="http://vimeo.com/fripfrap/videos/rss" title="Subscribe to vimeo video feed"></a>
             <a class="t-site-nav-item t-audio-icon" data-icon="&#xE0005" href="/feed/audio" title="Subscribe to just the audio feed"></a>
@@ -26,14 +25,14 @@
         <article class="t-episode">  
 	<div class="t-episode-video" data-vimeo-id="51905423"></div>
     <h3 class="t-episode-header t-grid">
-    	<time  class="t-episode-time t-grid__cell t-grid t-unit-1-5"
+    	<time  class="t-episode-time t-gridcell-1-5 t-grid"
     	       datetime="2012-10-22">
-    		<b class="t-episode-time-item t-episode-time-date t-grid__cell t-unit-1-3">22</b>
-    		<b class="t-episode-time-item t-episode-time-month-year t-grid__cell t-unit-2-3">Oct<br>
+    		<b class="t-episode-time-item t-episode-time-date t-gridcell-1-3">22</b>
+    		<b class="t-episode-time-item t-episode-time-month-year t-gridcell-2-3">Oct<br>
     		   2012
     		</b>    		
     	</time>
-    	<a class="t-h1 t-episode-title t-grid__cell t-unit-4-5" href="">Episode 02</a>
+    	<a class="t-h1 t-episode-title t-gridcell-4-5" href="">Episode 02</a>
     </h3>    
     <div class="t-episode-shownotes"><h4>Show Notes</h4><ul>
 <li><a href="http://jsconf.eu">JSConf.eu</a></li>
@@ -78,22 +77,19 @@
           <div class="t-featuring-item">
             <h2 class="t-h2">Music Credits</h2>
             <p class="t-featuring-content">Selections by <a href="http://twitter.com/ultror">Jonas Westerlund</a></p>
-              <li class="t-list-item t-credit-item">
-                <a class="t-credit-item-content" href="http://randsrecords.greedbag.com/buy/the-pathway-to-tiraquon/"><cite class="t-credit-songtitle">FEATURE PRESENTATION</cite> by Space Dimension Controller</a>
-              </li>
-              <li class="t-list-item t-credit-item">
-                <a class="t-credit-item-content" href="http://kaninerecords.com/the-depreciation-guild"><cite class="t-credit-songtitle">My Chariot</cite> by The Depreciation Guild</a>
-              </li>
-            </ul>
+            <div class="t-creditlist t-grid--center">
+              <div class="t-credit-item t-gridcell-1-2">
+                <a class="t-credit-item-content" href="http://randsrecords.greedbag.com/buy/the-pathway-to-tiraquon/"><cite class="t-credit-songtitle">FEATURE PRESENTATION</cite>Space Dimension Controller</a>
+              </div><div class="t-credit-item t-gridcell-1-2">
+                <a class="t-credit-item-content" href="http://kaninerecords.com/the-depreciation-guild"><cite class="t-credit-songtitle">My Chariot</cite>The Depreciation Guild</a>
+              </div>
+            </div>          
           </div>
           <div class="t-featuring-item t-copyright">
             <p class="t-featuring-content">&copy; MMXII<br>Divya Manian & Garann Means.</p>
-            <p class="t-featuring-content">All videos released under <a href="#">CC 3.0 license</a></p>
+            <p class="t-featuring-content">All videos released under <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0 license</a></p>
           </div>
         </aside>
-
-        <script src="js/main.js"></script>
-
         <script>
             var _gaq=[['_setAccount','UA-97188-3'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
