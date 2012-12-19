@@ -1,0 +1,63 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+
+<channel>
+
+<title>Fripfrap</title>
+
+<link>http://fripfrap.io</link>
+
+<language>en-us</language>
+
+<copyright>&#x2117; &amp; &#xA9; {{ site.time | date: "%Y" }} Divya Manian &amp; Garann Means</copyright>
+
+<pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+
+<itunes:subtitle>Front-end Banter in 30 mins or less</itunes:subtitle>
+
+<itunes:author>Divya Manian &amp; Garann Means</itunes:author>
+
+<itunes:summary>Divya Manian &amp; Garann Means talk about what is new in the world of front-end web development, standards, and technology.</itunes:summary>
+
+<description>Each week we discuss what are some of the tools, technologies &amp; standards work that is catching our attention.</description>
+
+<itunes:owner>
+
+<itunes:name>Divya Manian</itunes:name>
+
+<itunes:email>apple@nimbu.in</itunes:email>
+
+</itunes:owner>
+
+<itunes:image href="{{site.aws}}/assets/podcast.png" />
+
+<itunes:category text="Technology">
+
+<itunes:category text="Tech News"/>
+
+<itunes:category text="Software How-To"/>
+
+</itunes:category>
+
+{% for post in site.posts %}
+<item>
+	<title>{{ post.title | xml_escape }}</title>
+	<link>{{site.url}}{{ post.url }}</link>
+	<itunes:author>Divya Manian &amp; Garann Means</itunes:author>
+	<itunes:subtitle></itunes:subtitle>
+	<itunes:summary>{{ post.content | xml_escape }}</itunes:summary>	
+	<enclosure url="{{site.aws}}/Fripfrap-{{ post.title | split: " " | join: "-"}}.mp3" length="{{ post.size }}" type="audio/mpeg" />
+	<description>{{ post.content | xml_escape }}</description>
+	<guid>{{ site.url }}{{ post.url }}</guid>
+	<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+	<itunes:duration>{{ post.duration }}</itunes:duration>
+</item>
+{% endfor %}
+
+</channel>
+
+</rss>
