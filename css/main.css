@@ -747,7 +747,20 @@ t.t-grid--center {
     display: block;
 }
 
-.no-svg .t-site-title .ir::before {
+.no-svg .t-site-title,
+.no-svg .t-featuring-title {
+    line-height: 1;
+    font-size: 0.8em;
+    max-width: 100%;
+    text-align: center;
+}
+
+.no-svg .t-site-title {
+    font-size: 4em;
+}
+
+.no-svg .t-site-title .ir::before,
+.no-svg .t-featuring-title::before {
     *text-indent: 0;
     display: inline;
     content: none;
