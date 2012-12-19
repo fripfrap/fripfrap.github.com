@@ -762,6 +762,7 @@ t.t-grid--center {
 .no-svg .t-site-title .ir:before,
 .no-svg .t-featuring-title:before {
     *text-indent: 0;
+    width: 100%;
     display: inline;
     content: none;
 }
