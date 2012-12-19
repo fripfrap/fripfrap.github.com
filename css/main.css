@@ -759,8 +759,8 @@ t.t-grid--center {
     font-size: 4em;
 }
 
-.no-svg .t-site-title .ir::before,
-.no-svg .t-featuring-title::before {
+.no-svg .t-site-title .ir:before,
+.no-svg .t-featuring-title:before {
     *text-indent: 0;
     display: inline;
     content: none;
