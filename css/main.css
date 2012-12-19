@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'icomoon';
-    src:url('https://s3.amazonaws.com/fripfrap/assets/icomoon.eot');
-    src:url('https://s3.amazonaws.com/fripfrap/assets/icomoon.eot?#iefix') format('embedded-opentype'),        
-        url('https://s3.amazonaws.com/fripfrap/assets/icomoon.woff') format('woff'),
-        url('https://s3.amazonaws.com/fripfrap/assets/icomoon.svg#icomoon') format('svg'),
-        url('https://s3.amazonaws.com/fripfrap/assets/icomoon.ttf') format('truetype');
+    src:url('http://s3.amazonaws.com/fripfrap/assets/icomoon.eot');
+    src:url('http://s3.amazonaws.com/fripfrap/assets/icomoon.eot?#iefix') format('embedded-opentype'),        
+        url('http://s3.amazonaws.com/fripfrap/assets/icomoon.woff') format('woff'),
+        url('http://s3.amazonaws.com/fripfrap/assets/icomoon.svg#icomoon') format('svg'),
+        url('http://s3.amazonaws.com/fripfrap/assets/icomoon.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'amp';
-    src:url('https://s3.amazonaws.com/fripfrap/assets/icomoon.eot');
-    src:url('https://s3.amazonaws.com/fripfrap/assets/icomoon.eot?#iefix') format('embedded-opentype'),        
-        url('https://s3.amazonaws.com/fripfrap/assets/icomoon.woff') format('woff'),
-        url('https://s3.amazonaws.com/fripfrap/assets/icomoon.svg#icomoon') format('svg'),
-        url('https://s3.amazonaws.com/fripfrap/assets/icomoon.ttf') format('truetype');
+    src:url('http://s3.amazonaws.com/fripfrap/assets/icomoon.eot');
+    src:url('http://s3.amazonaws.com/fripfrap/assets/icomoon.eot?#iefix') format('embedded-opentype'),        
+        url('http://s3.amazonaws.com/fripfrap/assets/icomoon.woff') format('woff'),
+        url('http://s3.amazonaws.com/fripfrap/assets/icomoon.svg#icomoon') format('svg'),
+        url('http://s3.amazonaws.com/fripfrap/assets/icomoon.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     unicode-range: U+0026;
