@@ -1,5 +1,5 @@
 url: http://fripfrap.io
-aws: https://s3.amazonaws.com/fripfrap
+aws: http://s3.amazonaws.com/fripfrap
 auto: true
 markdown: rdiscount
 permalink: /:title/
