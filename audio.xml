@@ -1,3 +1,6 @@
+---
+layout: nil
+---
 <?xml version="1.0" encoding="UTF-8"?>
 
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
@@ -10,9 +13,9 @@
 
 <language>en-us</language>
 
-<copyright>&#x2117; &amp; &#xA9; 2012 Divya Manian &amp; Garann Means</copyright>
+<copyright>&#x2117; &amp; &#xA9; {{ site.time | date: "%Y" }} Divya Manian &amp; Garann Means</copyright>
 
-<pubDate>Wed, 19 Dec 2012 13:18:01 +0530</pubDate>
+<pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 
 <itunes:subtitle>Front-end Banter in 30 mins or less</itunes:subtitle>
 
@@ -30,7 +33,7 @@
 
 </itunes:owner>
 
-<itunes:image href="http://s3.amazonaws.com/fripfrap/assets/podcast.png" />
+<itunes:image href="{{site.aws}}/assets/podcast.png" />
 
 <itunes:category text="Technology">
 
@@ -40,162 +43,20 @@
 
 </itunes:category>
 
-
+{% for post in site.posts %}
 <item>
-	<title>Episode 03</title>
-	<link>http://fripfrap.io/03/</link>
+	<title>{{ post.title | xml_escape }}</title>
+	<link>{{site.url}}{{ post.url }}</link>
 	<itunes:author>Divya Manian &amp; Garann Means</itunes:author>
 	<itunes:subtitle></itunes:subtitle>
-	<itunes:summary>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://instagram.com/divya_&quot;&gt;Instagram profiles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;blog.instagram.com/post/35068144047/announcing-instagram-profiles-on-the-web&quot;&gt;blog post&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://testthewebforward.org/paris-2012.html&quot;&gt;Test the Web Forward&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://w3.org/2012/10/TPAC/&quot;&gt;TPAC 2012&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://empirejs.org/&quot;&gt;Empire.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://tmpvar.com/project/tmpad/&quot;&gt;Elijah Insua's tmpad&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://youtube.com/watch?v=a3J5_IVxCB4&quot;&gt;Rick Waldron's propose-a-tron&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://nodeknockout.com/teams/coalition-for-the-li&quot;&gt;Sara Chipps, Rushaine McBean, et al's xmas sweater&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://github.com/natbat/hamster&quot;&gt;Natalie Downe and Simon Willison's hamster wheel&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://twitter.com/domenic&quot;&gt;Domenic Denicola&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wirfs-brock.com/allen&quot;&gt;Allen Wirfs Brock&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wiki.ecmascript.org/doku.php?id=harmony:modules&quot;&gt;ES6 modules&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</itunes:summary>	
-	<enclosure url="http://s3.amazonaws.com/fripfrap/Fripfrap-Episode-03.mp3" length="48226784" type="audio/mpeg" />
-	<description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://instagram.com/divya_&quot;&gt;Instagram profiles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;blog.instagram.com/post/35068144047/announcing-instagram-profiles-on-the-web&quot;&gt;blog post&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://testthewebforward.org/paris-2012.html&quot;&gt;Test the Web Forward&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://w3.org/2012/10/TPAC/&quot;&gt;TPAC 2012&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://empirejs.org/&quot;&gt;Empire.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://tmpvar.com/project/tmpad/&quot;&gt;Elijah Insua's tmpad&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://youtube.com/watch?v=a3J5_IVxCB4&quot;&gt;Rick Waldron's propose-a-tron&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://nodeknockout.com/teams/coalition-for-the-li&quot;&gt;Sara Chipps, Rushaine McBean, et al's xmas sweater&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://github.com/natbat/hamster&quot;&gt;Natalie Downe and Simon Willison's hamster wheel&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://twitter.com/domenic&quot;&gt;Domenic Denicola&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wirfs-brock.com/allen&quot;&gt;Allen Wirfs Brock&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wiki.ecmascript.org/doku.php?id=harmony:modules&quot;&gt;ES6 modules&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-	<guid>http://fripfrap.io/03/</guid>
-	<pubDate>Tue, 06 Nov 2012 00:00:00 +0530</pubDate>
-	<itunes:duration>120540</itunes:duration>
+	<itunes:summary>{{ post.content | xml_escape }}</itunes:summary>	
+	<enclosure url="{{site.aws}}/Fripfrap-{{ post.title | split: " " | join: "-"}}.mp3" length="{{ post.size }}" type="audio/mpeg" />
+	<description>{{ post.content | xml_escape }}</description>
+	<guid>{{ site.url }}{{ post.url }}</guid>
+	<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+	<itunes:duration>{{ post.duration }}</itunes:duration>
 </item>
-
-<item>
-	<title>Episode 02</title>
-	<link>http://fripfrap.io/02/</link>
-	<itunes:author>Divya Manian &amp; Garann Means</itunes:author>
-	<itunes:subtitle></itunes:subtitle>
-	<itunes:summary>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://jsconf.eu&quot;&gt;JSConf.eu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://lxjs.com&quot;&gt;LXJS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://nodecopter.com/&quot;&gt;Nodecopter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ardrone2.parrot.com/&quot;&gt;Parrot AR Drone 2.0&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://twitter.com/brianleroux&quot;&gt;Brian Leroux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://2012.jsconf.eu/speaker/2012/08/24/javascript-is-the-new-punk-rock.html&quot;&gt;JavaScript is the new punk rock&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stuartmemo.com/&quot;&gt;Stuart Memo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://typescriptlang.org/&quot;&gt;TypeScript&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://webreflection.blogspot.com.au/2012/10/javascript-made-everyone-crazy.html&quot;&gt;JavaScript Made Everyone Crazy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://weblog.bocoup.com/javascript-object-observe/&quot;&gt;ES 6 Object.observe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://gist.github.com/3776178&quot;&gt;@names&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://github.com/rwldrn/tc39-notes&quot;&gt;Rick Waldron's TC39 notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://smallcultfollowing.com/babysteps/blog/2012/10/10/rivertrail/&quot;&gt;Rivertrail, parallel array processing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://url.spec.whatwg.org/&quot;&gt;URL Spec&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://tools.ietf.org/html/rfc3987&quot;&gt;IRI RFC&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://youtube.com/watch?v=GaqxIMLLOu8&amp;amp;feature=plcp&quot;&gt;Mikeal Rogers LXJS keynote&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://testthewebforward.org&quot;&gt;Test the Web Forward&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://webplatform.org&quot;&gt;Webplatform Docs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://empirejs.org/&quot;&gt;EmpireJS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</itunes:summary>	
-	<enclosure url="http://s3.amazonaws.com/fripfrap/Fripfrap-Episode-02.mp3" length="33067181" type="audio/mpeg" />
-	<description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://jsconf.eu&quot;&gt;JSConf.eu&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://lxjs.com&quot;&gt;LXJS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://nodecopter.com/&quot;&gt;Nodecopter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ardrone2.parrot.com/&quot;&gt;Parrot AR Drone 2.0&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://twitter.com/brianleroux&quot;&gt;Brian Leroux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://2012.jsconf.eu/speaker/2012/08/24/javascript-is-the-new-punk-rock.html&quot;&gt;JavaScript is the new punk rock&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stuartmemo.com/&quot;&gt;Stuart Memo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://typescriptlang.org/&quot;&gt;TypeScript&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://webreflection.blogspot.com.au/2012/10/javascript-made-everyone-crazy.html&quot;&gt;JavaScript Made Everyone Crazy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://weblog.bocoup.com/javascript-object-observe/&quot;&gt;ES 6 Object.observe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://gist.github.com/3776178&quot;&gt;@names&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://github.com/rwldrn/tc39-notes&quot;&gt;Rick Waldron's TC39 notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://smallcultfollowing.com/babysteps/blog/2012/10/10/rivertrail/&quot;&gt;Rivertrail, parallel array processing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://url.spec.whatwg.org/&quot;&gt;URL Spec&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://tools.ietf.org/html/rfc3987&quot;&gt;IRI RFC&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://youtube.com/watch?v=GaqxIMLLOu8&amp;amp;feature=plcp&quot;&gt;Mikeal Rogers LXJS keynote&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://testthewebforward.org&quot;&gt;Test the Web Forward&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://webplatform.org&quot;&gt;Webplatform Docs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://empirejs.org/&quot;&gt;EmpireJS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-	<guid>http://fripfrap.io/02/</guid>
-	<pubDate>Mon, 22 Oct 2012 00:00:00 +0530</pubDate>
-	<itunes:duration>82680</itunes:duration>
-</item>
-
-<item>
-	<title>Episode 01</title>
-	<link>http://fripfrap.io/01/</link>
-	<itunes:author>Divya Manian &amp; Garann Means</itunes:author>
-	<itunes:subtitle></itunes:subtitle>
-	<itunes:summary>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://dev.w3.org/csswg/css-variables/&quot;&gt;CSS Variables&lt;/a&gt;. &lt;a href=&quot;http://xanthir.com/blog/b4KT0&quot;&gt;Rationale for current syntax&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS&quot;&gt;List of languages that compile to JS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jashkenas.github.com/coffee-script/&quot;&gt;CoffeeScript&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/traceur-compiler/&quot;&gt;Traceur&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://dartlang.org/&quot;&gt;Dart&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://roy.brianmckenna.org/&quot;&gt;Roy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://github.com/kripken/emscripten/wiki&quot;&gt;Emscripten&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://girldevelopit.com/&quot;&gt;Girl Develop It&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ladieslearningcode.com/&quot;&gt;Ladies Learning Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blackgirlscode.com/&quot;&gt;Black Girls Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://girlswhocode.com/&quot;&gt;Girls Who Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://railsbridge.org/en&quot;&gt;RailsBridge&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ejohn.org/blog/introducing-khan-cs/&quot;&gt;John Resig on Khan Academy's programming tool&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://vimeo.com/36579366&quot;&gt;Bret Victor's talk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://codepen.io/&quot;&gt;CodePen&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/&quot;&gt;jsFiddle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://codequarterly.com/2011/rich-hickey/&quot;&gt;Rich Hickey's Interview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://clojure.org/&quot;&gt;Clojure&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</itunes:summary>	
-	<enclosure url="http://s3.amazonaws.com/fripfrap/Fripfrap-Episode-01.mp3" length="29806880" type="audio/mpeg" />
-	<description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://dev.w3.org/csswg/css-variables/&quot;&gt;CSS Variables&lt;/a&gt;. &lt;a href=&quot;http://xanthir.com/blog/b4KT0&quot;&gt;Rationale for current syntax&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS&quot;&gt;List of languages that compile to JS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jashkenas.github.com/coffee-script/&quot;&gt;CoffeeScript&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/traceur-compiler/&quot;&gt;Traceur&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://dartlang.org/&quot;&gt;Dart&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://roy.brianmckenna.org/&quot;&gt;Roy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://github.com/kripken/emscripten/wiki&quot;&gt;Emscripten&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://girldevelopit.com/&quot;&gt;Girl Develop It&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ladieslearningcode.com/&quot;&gt;Ladies Learning Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blackgirlscode.com/&quot;&gt;Black Girls Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://girlswhocode.com/&quot;&gt;Girls Who Code&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://railsbridge.org/en&quot;&gt;RailsBridge&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ejohn.org/blog/introducing-khan-cs/&quot;&gt;John Resig on Khan Academy's programming tool&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://vimeo.com/36579366&quot;&gt;Bret Victor's talk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://codepen.io/&quot;&gt;CodePen&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/&quot;&gt;jsFiddle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://codequarterly.com/2011/rich-hickey/&quot;&gt;Rich Hickey's Interview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://clojure.org/&quot;&gt;Clojure&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-	<guid>http://fripfrap.io/01/</guid>
-	<pubDate>Sun, 02 Sep 2012 00:00:00 +0530</pubDate>
-	<itunes:duration>75300</itunes:duration>
-</item>
-
+{% endfor %}
 
 </channel>
 
