@@ -645,6 +645,15 @@ b[class] {
     font-weight: normal;
 }
 
+/* Make text more visible on selection. */
+::-moz-selection {
+    color: #000;
+}
+
+::selection {
+    color: #000;
+}
+
 /* GRID UNITS */
 .t-grid,
 .t-gridcell.t-grid,
